@@ -1,0 +1,29 @@
+services:
+  wakapi:
+    image: ghcr.io/muety/wakapi:2.16.1
+    container_name: wakapi
+    restart: unless-stopped
+    ports:
+      - '127.0.0.1:13000:3000'
+    init: true
+    volumes:
+      - ./wakapi-data:/data
+    environment:
+      - ENVIRONMENT=prod
+      - WAKAPI_PASSWORD_SALT=${WAKAPI_PASSWORD_SALT}
+      - WAKAPI_DISABLE_FRONTPAGE=false
+      - WAKAPI_ALLOW_SIGNUP=true
+      - WAKAPI_OIDC_ALLOW_SIGNUP=false
+      - WAKAPI_LEADERBOARD_ENABLED=true
+      - WAKAPI_LEADERBOARD_REQUIRE_AUTH=false
+      - WAKAPI_IMPORT_ENABLED=false
+      - WAKAPI_INSECURE_COOKIES=false
+      - WAKAPI_APP_TRUST_PROXY_HEADERS=true
+      - WAKAPI_MAX_INACTIVE_MONTHS=-1
+      - WAKAPI_PUBLIC_URL=https://wakapi.your.domain
+      # "24_hours", "week", "month",
+      # "year", "7_days", "14_days",
+      # "30_days", "6_months", "12_months", "all_time"
+      - WAKAPI_LEADERBOARD_SCOPE=all_time
+      - WAKAPI_DB_TYPE=sqlite3
+      - WAKAPI_MAIL_ENABLED=false
