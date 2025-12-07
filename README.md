@@ -21,23 +21,23 @@ Each folder represents an independent service and usually contains:
 
 ## Included Services
 
-| Name | Description |
-|------|-------------|
-| [bark-server](barkserver/) | Self-hosted server implementation for iOS Bark push service |
-| blinko | Lightweight personal notes and knowledge management tool |
-| cloudreve-pro | Private cloud storage system with support for multiple storage backends |
-| gitea | Lightweight self-hosted Git hosting platform |
-| hugo | Static website build and deployment environment based on Hugo |
-| immich | High-performance self-hosted photo and video management platform |
-| it-tolls | Collection of commonly used self-hosted IT tools |
-| nah.pet | Lightweight self-hosted pet-themed / personal showcase website |
-| ollama | Server environment for running large language models locally |
-| plausible | Privacy-friendly open-source web analytics tool |
-| stirling-pdf | Open-source PDF processing and conversion toolkit |
-| twikoo | Self-hosted backend for static website comment system |
-| uptime-kuma | Lightweight uptime and service monitoring dashboard |
-| wakapi | Open-source coding activity tracking tool |
-| woodpecker-ci | Lightweight continuous integration system compatible with Drone |
+| Name                                                         | Description                                                  |
+| ----- | ---- |
+| [bark-server](/dejavu/selfhosted/src/branch/master/bark-server) | Self-hosted server implementation for iOS Bark push service. |
+| [blinko](/dejavu/selfhosted/src/branch/master/blinko)        | An open-source, self-hosted personal AI note tool prioritizing privacy, built using TypeScript. |
+| [cloudreve-pro](/dejavu/selfhosted/src/branch/master/cloudreve-pro) | Private cloud storage system with support for multiple storage backends. |
+| [gitea](/dejavu/selfhosted/src/branch/master/gitea)          | Lightweight self-hosted Git hosting platform.                |
+| [hugo](/dejavu/selfhosted/src/branch/master/hugo)            | Static website build and deployment environment based on Hugo, Gitea and Woodpecker CI. |
+| [immich](/dejavu/selfhosted/src/branch/master/immich)        | High-performance self-hosted photo and video management platform. |
+| [it-tolls](/dejavu/selfhosted/src/branch/master/it-tolls)    | Collection of commonly used self-hosted IT tools.            |
+| [nah.pet](/dejavu/selfhosted/src/branch/master/nah.pet)      | Rewriting paths with bad energy - An alternative to TinyURL, YOURLS, Shlink. |
+| [ollama](/dejavu/selfhosted/src/branch/master/ollama)        | Server environment for running large language models locally. |
+| [plausible](/dejavu/selfhosted/src/branch/master/plausible)  | Easy to use and privacy-friendly Google Analytics alternative. |
+| [stirling-pdf](/dejavu/selfhosted/src/branch/master/stirling-pdf) | Lets you edit PDFs on any device anywhere.                   |
+| [twikoo](/dejavu/selfhosted/src/branch/master/twikoo)        | A simple, safe and free comment system.                      |
+| [uptime-kuma](/dejavu/selfhosted/src/branch/master/uptime-kuma) | A fancy self-hosted monitoring tool.                         |
+| [wakapi](/dejavu/selfhosted/src/branch/master/wakapi)        | A minimalist, self-hosted WakaTime-compatible backend for coding statistics. |
+| [woodpecker-ci](/dejavu/selfhosted/src/branch/master/woodpecker-ci) | A simple, yet powerful CI/CD engine with great extensibility. |
 
 ## Usage (Quick Guide)
 

@@ -21,23 +21,24 @@
 
 ## 收录服务
 
-| 名称 | 说明 |
-|------|------|
-| [bark-server](/dejavu/selfhosted/src/branch/master/bark-server) | iOS Bark 推送服务的自托管服务器端实现 |
-| blinko | 轻量级的个人笔记与知识管理工具 |
-| cloudreve-pro | 支持多存储后端的私有云网盘系统 |
-| gitea | 轻量级自托管 Git 代码托管平台 |
-| hugo | 基于 Hugo 的静态网站构建与部署环境 |
-| immich | 高性能的自托管照片与视频管理平台 |
-| it-tolls | 常用 IT 工具集合的自托管服务 |
-| nah.pet | 轻量级的自托管宠物类/个人展示站点 |
-| ollama | 本地运行大语言模型的服务端环境 |
-| plausible | 隐私友好的开源网站统计分析工具 |
-| stirling-pdf | 开源的 PDF 处理与转换工具集 |
-| twikoo | 静态网站评论系统的自托管后端 |
-| uptime-kuma | 轻量级的服务状态监控面板 |
-| wakapi | 开源的编码时间统计工具 |
-| woodpecker-ci | 兼容 Drone 的轻量级持续集成系统 |
+| 名称                                                         | 说明                                                          |
+| ----- | ---- |
+| [bark-server](/dejavu/selfhosted/src/branch/master/bark-server) | iOS Bark 推送服务的自托管服务器端实现。                      |
+| [blinko](/dejavu/selfhosted/src/branch/master/blinko)        | 一款开源、自托管的个人 AI 笔记工具，优先保护隐私，使用 TypeScript 构建。 |
+| [cloudreve-pro](/dejavu/selfhosted/src/branch/master/cloudreve-pro) | 支持多存储后端的私有云网盘系统。                              |
+| [gitea](/dejavu/selfhosted/src/branch/master/gitea)          | 轻量级自托管 Git 代码托管平台。                               |
+| [hugo](/dejavu/selfhosted/src/branch/master/hugo)            | 基于 Hugo、Gitea 和 Woodpecker CI 的静态网站构建与部署环境。   |
+| [immich](/dejavu/selfhosted/src/branch/master/immich)        | 高性能的自托管照片与视频管理平台。                             |
+| [it-tolls](/dejavu/selfhosted/src/branch/master/it-tolls)    | 常用自托管 IT 工具集合。                                     |
+| [nah.pet](/dejavu/selfhosted/src/branch/master/nah.pet)      | 重写短链接路径的另类方案——替代 TinyURL、YOURLS、Shlink。      |
+| [ollama](/dejavu/selfhosted/src/branch/master/ollama)        | 本地运行大语言模型的服务器环境。                               |
+| [plausible](/dejavu/selfhosted/src/branch/master/plausible)  | 简单易用且隐私友好的 Google Analytics 替代方案。             |
+| [stirling-pdf](/dejavu/selfhosted/src/branch/master/stirling-pdf) | 可以在任何设备随时编辑 PDF 文件。                               |
+| [twikoo](/dejavu/selfhosted/src/branch/master/twikoo)        | 简单、安全且免费的评论系统。                                   |
+| [uptime-kuma](/dejavu/selfhosted/src/branch/master/uptime-kuma) | 精美的自托管服务监控工具。                                     |
+| [wakapi](/dejavu/selfhosted/src/branch/master/wakapi)        | 极简、自托管的 WakaTime 兼容后端，用于编码统计。               |
+| [woodpecker-ci](/dejavu/selfhosted/src/branch/master/woodpecker-ci) | 简单而强大的 CI/CD 引擎，扩展性极佳。                           |
+
 
 ## 使用方式（简要）
 
