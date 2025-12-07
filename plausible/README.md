@@ -1,5 +1,7 @@
 ## Plausible CE(Community Edition)
 
+>Easy to use and privacy-friendly Google Analytics alternative.
+
 - Source Code: https://github.com/plausible/analytics
 - Website: https://plausible.io/
 - Docs: https://plausible.io/docs/

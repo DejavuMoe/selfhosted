@@ -1,5 +1,7 @@
 ## Ollama
 
+>Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.
+
 - Source Code:
 - Website:
 - Explore Models:

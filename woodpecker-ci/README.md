@@ -1,5 +1,7 @@
 ## Woodpecker CI
 
+>A simple, yet powerful CI/CD engine with great extensibility.
+
 - Source Code: https://github.com/woodpecker-ci/woodpecker
 - Website: https://woodpecker-ci.org/
 - Docs: https://woodpecker-ci.org/docs/intro

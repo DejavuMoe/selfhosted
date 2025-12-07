@@ -1,5 +1,7 @@
 ## Wakapi
 
+>A minimalist, self-hosted WakaTime-compatible backend for coding statistics.
+
 - Source Code: https://github.com/muety/wakapi
 - Website: https://wakapi.dev/
 

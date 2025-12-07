@@ -1,5 +1,7 @@
 ## Blinko
 
+>An open-source, self-hosted personal AI note tool prioritizing privacy, built using TypeScript .
+
 - Source Code: https://github.com/blinkospace/blinko
 - Website: https://blinko.space/
 
