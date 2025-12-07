@@ -1,0 +1,28 @@
+services:
+  stirling-pdf:
+    image: stirlingtools/stirling-pdf:latest-fat
+    container_name: stirling-pdf
+    restart: unless-stopped
+    ports:
+      - '127.0.0.1:48080:8080'
+    volumes:
+      - ./stirling-data/tessdata:/usr/share/tessdata
+      - ./stirling-data/configs:/configs
+      - ./stirling-data/logs:/logs
+      - ./stirling-data/pipeline:/pipeline
+    environment:
+      # system
+      - SYSTEM_DEFAULTLOCALE=zh-CN
+      - SYSTEM_ENABLEANALYTICS=false
+      - SYSTEM_ENABLESCARF=false
+      - SYSTEM_SHOWUPDATE=false
+      - SYSTEM_SHOWUPDATEONLYADMIN=false
+      # security
+      - SECURITY_ENABLELOGIN=true
+      - SECURITY_CSRFDISABLED=false
+      - SECURITY_GOOGLEVISIBILITY=false
+      # UI
+      - UI_LOGOSTYLE=modern
+      - UI_APPNAME="Stirling PDF"
+      - UI_HOMEDESCRIPTION="Powered by Stirling PDF with Security"
+      - UI_APPNAVBARNAME="Stirling PDF"
