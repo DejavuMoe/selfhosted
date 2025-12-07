@@ -1,5 +1,7 @@
 # dejavu/selfhosted
 
+English | [中文简体](README.zh.md)
+
 This is a repository used to record and maintain self-hosted application templates. It mainly contains configuration templates for **Docker Compose** and **Nginx reverse proxy**, aiming to help quickly deploy common open-source services and private applications.
 
 **This repository is suitable for:**
@@ -21,7 +23,7 @@ Each folder represents an independent service and usually contains:
 
 | Name | Description |
 |------|-------------|
-| [bark-server](barkserver/) | Self-hosted server implementation for iOS Bark push service |
+| [bark-server](./barkserver/) | Self-hosted server implementation for iOS Bark push service |
 | blinko | Lightweight personal notes and knowledge management tool |
 | cloudreve-pro | Private cloud storage system with support for multiple storage backends |
 | gitea | Lightweight self-hosted Git hosting platform |

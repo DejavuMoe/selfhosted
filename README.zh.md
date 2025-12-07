@@ -21,7 +21,7 @@
 
 | 名称 | 说明 |
 |------|------|
-| [bark-server](barkserver/) | iOS Bark 推送服务的自托管服务器端实现 |
+| [bark-server](/barkserver/) | iOS Bark 推送服务的自托管服务器端实现 |
 | blinko | 轻量级的个人笔记与知识管理工具 |
 | cloudreve-pro | 支持多存储后端的私有云网盘系统 |
 | gitea | 轻量级自托管 Git 代码托管平台 |
