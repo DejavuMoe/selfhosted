@@ -1,8 +1,8 @@
 ## Gitea
 
-- Source Code:
-- Website:
-- Docs:
+- Source Code: https://github.com/go-gitea/gitea
+- Website: https://about.gitea.com/
+- Docs: https://docs.gitea.com/
 
 ## Two compose templates are provided here:
 
