@@ -1,0 +1,35 @@
+when:
+  event:
+    - push
+  branch:
+    - master
+
+steps:
+  - name: build hugo site
+    image: docker.io/hugomods/hugo:ci-0.152.2
+    volumes:
+      - /tmp/hugo_cache:/tmp/hugo_cache
+      - /var/www:/var/www
+    commands:
+      - rm -rf /var/www/blog.your.domain/html/*
+      - hugo --minify -d /var/www/blog.your.domain/html
+
+  - name: site deploy
+    image: alpine:3.20
+    commands:
+      - echo "site build success，update path /var/www/blog.your.domain/html"
+
+  - name: purge-cdn
+    image: curlimages/curl:latest
+    environment:
+      CF_PURGE_CACHE_API_TOKEN:
+        from_secret: CF_PURGE_CACHE_API_TOKEN
+      CF_ZONE_ID:
+        from_secret: CF_ZONE_ID
+    commands:
+      - echo "purge Cloudflare CDN cache for blog ..."
+      - |
+        curl -sS "https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/purge_cache" \
+          -H "Content-Type: application/json" \
+          -H "Authorization: Bearer $CF_PURGE_CACHE_API_TOKEN" \
+          -d '{"hosts":["blog.your.domain"]}'
