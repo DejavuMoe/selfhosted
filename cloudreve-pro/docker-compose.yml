@@ -1,0 +1,42 @@
+services:
+  pro:
+    image: cloudreve.azurecr.io/cloudreve/pro:latest
+    container_name: cloudreve-pro-backend
+    depends_on:
+      - postgresql
+      - redis
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5212:5212"
+      # for magnet/bt download
+      #- "6888:6888"
+      #- "6888:6888/udp"
+    environment:
+      - CR_CONF_Database.Type=postgres
+      - CR_CONF_Database.Host=postgresql
+      - CR_CONF_Database.User=cloudreve
+      - CR_CONF_Database.Name=cloudreve
+      - CR_CONF_Database.Port=5432
+      - CR_CONF_Redis.Server=redis:6379
+      - CR_LICENSE_KEY=${CR_LICENSE_KEY}
+    volumes:
+      - ./data:/cloudreve/data
+
+  postgresql:
+    image: postgres:17
+    container_name: cloudreve-postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=cloudreve
+      - POSTGRES_DB=cloudreve
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - ./db:/var/lib/postgresql/data
+      - /etc/localtime:/etc/localtime:ro
+
+  redis:
+    image: redis:latest
+    container_name: cloudreve-redis
+    restart: unless-stopped
+    volumes:
+      - ./redis:/data
