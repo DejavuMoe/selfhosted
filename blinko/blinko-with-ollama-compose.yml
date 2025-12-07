@@ -5,7 +5,7 @@ services:
     environment:
       NODE_ENV: production
       NEXTAUTH_URL: http://localhost:1111
-      NEXT_PUBLIC_BASE_URL: https://ink.via.moe
+      NEXT_PUBLIC_BASE_URL: https://blinko.your.domain
       NEXTAUTH_SECRET: ${NEXTAUTH_SECRET}
       DATABASE_URL: postgresql://postgres:blinko@postgres:5432/postgres
     depends_on:
