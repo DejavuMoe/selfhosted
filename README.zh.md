@@ -1,5 +1,7 @@
 # dejavu/selfhosted
 
+中文简体 | [English](README.md)
+
 这是一个用于记录和维护自托管应用的模板仓库，主要包含 **Docker Compose** 和 **Nginx 反向代理** 的配置模板，旨在帮助我快速部署常见的开源服务和私有化应用。
 
 **本仓库适合用于：**
@@ -21,7 +23,7 @@
 
 | 名称 | 说明 |
 |------|------|
-| [bark-server](/barkserver/) | iOS Bark 推送服务的自托管服务器端实现 |
+| [bark-server](/dejavu/selfhosted/src/branch/master/bark-server) | iOS Bark 推送服务的自托管服务器端实现 |
 | blinko | 轻量级的个人笔记与知识管理工具 |
 | cloudreve-pro | 支持多存储后端的私有云网盘系统 |
 | gitea | 轻量级自托管 Git 代码托管平台 |

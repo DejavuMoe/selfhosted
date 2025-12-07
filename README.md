@@ -23,7 +23,7 @@ Each folder represents an independent service and usually contains:
 
 | Name | Description |
 |------|-------------|
-| [bark-server](./barkserver/) | Self-hosted server implementation for iOS Bark push service |
+| [bark-server](barkserver/) | Self-hosted server implementation for iOS Bark push service |
 | blinko | Lightweight personal notes and knowledge management tool |
 | cloudreve-pro | Private cloud storage system with support for multiple storage backends |
 | gitea | Lightweight self-hosted Git hosting platform |
