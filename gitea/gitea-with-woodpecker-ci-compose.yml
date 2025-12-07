@@ -1,0 +1,59 @@
+services:
+  gitea:
+    image: docker.gitea.com/gitea:1.25.2-rootless
+    container_name: gitea
+    restart: unless-stopped
+    user: "1000"
+    volumes:
+      - ./data:/var/lib/gitea
+      - ./config:/etc/gitea
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "127.0.0.1:30000:3000"
+      - "127.0.0.1:22222:2222"
+    networks:
+      - gitea
+
+  woodpecker-server:
+    image: woodpeckerci/woodpecker-server:v3
+    container_name: woodpecker-server
+    restart: unless-stopped
+    ports:
+      - '127.0.0.1:8000:8000'
+    networks:
+      - gitea
+    volumes:
+      - ./woodpecker/server/data:/var/lib/woodpecker/
+    environment:
+      - WOODPECKER_OPEN=true
+      - WOODPECKER_ADMIN=
+      - WOODPECKER_HOST=https://woodpecker.your.domain
+      - WOODPECKER_AGENT_SECRET=${WOODPECKER_AGENT_SECRET}
+      - WOODPECKER_DISABLE_VERSION_CHECK=false
+      - WOODPECKER_GITEA=true
+      - WOODPECKER_GITEA_URL=https://gitea.your.domain
+      - WOODPECKER_GITEA_SKIP_VERIFY=false
+      - WOODPECKER_GITEA_CLIENT=${WOODPECKER_GITEA_CLIENT}
+      - WOODPECKER_GITEA_SECRET=${WOODPECKER_GITEA_SECRET}
+
+  woodpecker-agent:
+    image: woodpeckerci/woodpecker-agent:v3
+    container_name: woodpecker-agent
+    restart: unless-stopped
+    depends_on:
+      woodpecker-server:
+        condition: service_healthy
+    networks:
+      - gitea
+    volumes:
+      - ./woodpecker/agent/config:/etc/woodpecker
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WOODPECKER_SERVER=woodpecker-server:9000
+      - WOODPECKER_AGENT_SECRET=${WOODPECKER_AGENT_SECRET}
+      - WOODPECKER_MAX_WORKFLOWS=1
+      #- WOODPECKER_BACKEND_DOCKER_NETWORK=gitea
+
+networks:
+  gitea:
