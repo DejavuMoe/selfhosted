@@ -13,7 +13,7 @@
 
 ## Nginx Reverse Proxy
 
-- [nginx.conf](../gitea/woodpecker-ci.nginx.conf)
+- [nginx.conf](nginx.conf)
 
 ## Guide
 

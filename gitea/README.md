@@ -14,7 +14,7 @@
 ## Two nginx.conf templates are provided here:
 
 - [Gitea](nginx.conf)
-- [Gitea with Woodpecker CI](woodpecker-ci.nginx.conf)
+- [Gitea with Woodpecker CI](../woodpecker-ci/nginx.conf)
 
 ## Guide
 
