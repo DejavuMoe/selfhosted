@@ -1,0 +1,58 @@
+services:
+  server:
+    image: codeberg.org/forgejo/forgejo:13-rootless
+    container_name: fogejo
+    restart: unless-stopped
+    user: "1000"
+    volumes:
+      - ./data:/var/lib/gitea
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:2222:2222"
+    networks:
+      - forgejo
+
+  woodpecker-server:
+    image: woodpeckerci/woodpecker-server:v3
+    container_name: woodpecker-server
+    restart: unless-stopped
+    ports:
+      - '127.0.0.1:8000:8000'
+    networks:
+      - forgejo
+    volumes:
+      - ./woodpecker/server/data:/var/lib/woodpecker/
+    environment:
+      - WOODPECKER_OPEN=false
+      - WOODPECKER_ADMIN=dejavu
+      - WOODPECKER_HOST=https://ci.via.moe
+      - WOODPECKER_AGENT_SECRET=
+      - WOODPECKER_DISABLE_VERSION_CHECK=true
+      - WOODPECKER_FORGEJO_SKIP_VERIFY=false
+      - WOODPECKER_FORGEJO=true
+      - WOODPECKER_FORGEJO_URL=https://git.via.moe
+      - WOODPECKER_FORGEJO_CLIENT=
+      - WOODPECKER_FORGEJO_SECRET=
+
+  woodpecker-agent:
+    image: woodpeckerci/woodpecker-agent:v3
+    container_name: woodpecker-agent
+    restart: unless-stopped
+    depends_on:
+      woodpecker-server:
+        condition: service_healthy
+    networks:
+      - forgejo
+    volumes:
+      - ./woodpecker/agent/config:/etc/woodpecker
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WOODPECKER_SERVER=woodpecker-server:9000
+      - WOODPECKER_AGENT_SECRET=
+      - WOODPECKER_MAX_WORKFLOWS=1
+
+networks:
+  forgejo:
+    external: false
