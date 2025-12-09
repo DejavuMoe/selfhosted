@@ -22,7 +22,7 @@ Each folder represents an independent service and usually contains:
 ## Included Services
 
 | Name                                                         | Description                                                  |
-| ----- | ---- |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [bark-server](/dejavu/selfhosted/src/branch/master/bark-server) | Self-hosted server implementation for iOS Bark push service. |
 | [blinko](/dejavu/selfhosted/src/branch/master/blinko)        | An open-source, self-hosted personal AI note tool prioritizing privacy, built using TypeScript. |
 | [cloudreve-pro](/dejavu/selfhosted/src/branch/master/cloudreve-pro) | Private cloud storage system with support for multiple storage backends. |
@@ -38,6 +38,11 @@ Each folder represents an independent service and usually contains:
 | [uptime-kuma](/dejavu/selfhosted/src/branch/master/uptime-kuma) | A fancy self-hosted monitoring tool.                         |
 | [wakapi](/dejavu/selfhosted/src/branch/master/wakapi)        | A minimalist, self-hosted WakaTime-compatible backend for coding statistics. |
 | [woodpecker-ci](/dejavu/selfhosted/src/branch/master/woodpecker-ci) | A simple, yet powerful CI/CD engine with great extensibility. |
+| [forgejo](/dejavu/selfhosted/src/branch/master/forgejo)      | A self-hosted lightweight software forge.Easy to install and low maintenance, it just does the job. |
+| [memos](/dejavu/selfhosted/src/branch/master/memos)          | Privacy-first note-taking service with zero telemetry. No tracking, no ads, no subscription fees. |
+| [onedev](/dejavu/selfhosted/src/branch/master/onedev)        | Git server with CI/CD, kanban, and packages. Seamless integration. Unparalleled experience. |
+| [pocket-id](/dejavu/selfhosted/src/branch/master/pocket-id)  | A simple and easy-to-use OIDC provider that allows users to authenticate with their passkeys to your services. |
+| [tinyauth](/dejavu/selfhosted/src/branch/master/tinyauth)    | The simplest way to protect your apps with a login screen.   |
 
 ## Usage (Quick Guide)
 
