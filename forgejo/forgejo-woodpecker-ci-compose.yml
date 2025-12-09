@@ -1,7 +1,7 @@
 services:
   server:
     image: codeberg.org/forgejo/forgejo:13-rootless
-    container_name: fogejo
+    container_name: forgejo
     restart: unless-stopped
     user: "1000"
     volumes:
@@ -26,15 +26,15 @@ services:
       - ./woodpecker/server/data:/var/lib/woodpecker/
     environment:
       - WOODPECKER_OPEN=false
-      - WOODPECKER_ADMIN=dejavu
-      - WOODPECKER_HOST=https://ci.via.moe
+      - WOODPECKER_ADMIN=your forgejo username
+      - WOODPECKER_HOST=https://woodpecker.via.moe
       - WOODPECKER_AGENT_SECRET=
       - WOODPECKER_DISABLE_VERSION_CHECK=true
-      - WOODPECKER_FORGEJO_SKIP_VERIFY=false
       - WOODPECKER_FORGEJO=true
-      - WOODPECKER_FORGEJO_URL=https://git.via.moe
+      - WOODPECKER_FORGEJO_URL=https://git.your.domain
       - WOODPECKER_FORGEJO_CLIENT=
       - WOODPECKER_FORGEJO_SECRET=
+      - WOODPECKER_FORGEJO_SKIP_VERIFY=false
 
   woodpecker-agent:
     image: woodpeckerci/woodpecker-agent:v3
