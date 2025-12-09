@@ -23,27 +23,28 @@
 
 | 名称                                                         | 说明                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [bark-server](/dejavu/selfhosted/src/branch/master/bark-server) | iOS Bark 推送服务的自托管服务器端实现。                      |
-| [blinko](/dejavu/selfhosted/src/branch/master/blinko)        | 一款开源、自托管的个人 AI 笔记工具，优先保护隐私，使用 TypeScript 构建。 |
-| [cloudreve-pro](/dejavu/selfhosted/src/branch/master/cloudreve-pro) | 支持多存储后端的私有云网盘系统。                             |
-| [gitea](/dejavu/selfhosted/src/branch/master/gitea)          | 轻量级自托管 Git 代码托管平台。                              |
-| [hugo](/dejavu/selfhosted/src/branch/master/hugo)            | 基于 Hugo、Gitea 和 Woodpecker CI 的静态网站构建与部署环境。 |
+| [Bark Server](/dejavu/selfhosted/src/branch/master/bark-server) | iOS Bark 推送服务的自托管服务器端实现。                      |
+| [Blinko](/dejavu/selfhosted/src/branch/master/blinko)        | 一款开源、自托管的个人 AI 笔记工具，优先保护隐私，使用 TypeScript 构建。 |
+| [Cloudreve Pro](/dejavu/selfhosted/src/branch/master/cloudreve-pro) | 支持多存储后端的私有云网盘系统。                             |
+| [Gitea](/dejavu/selfhosted/src/branch/master/gitea)          | 轻量级自托管 Git 代码托管平台。                              |
+| [Hugo](/dejavu/selfhosted/src/branch/master/hugo)            | 基于 Hugo、Gitea 和 Woodpecker CI 的静态网站构建与部署环境。 |
 | [immich](/dejavu/selfhosted/src/branch/master/immich)        | 高性能的自托管照片与视频管理平台。                           |
-| [it-tolls](/dejavu/selfhosted/src/branch/master/it-tolls)    | 常用自托管 IT 工具集合。                                     |
+| [IT Tools](/dejavu/selfhosted/src/branch/master/it-tolls)    | 常用自托管 IT 工具集合。                                     |
 | [nah.pet](/dejavu/selfhosted/src/branch/master/nah.pet)      | 重写短链接路径的另类方案——替代 TinyURL、YOURLS、Shlink。     |
-| [ollama](/dejavu/selfhosted/src/branch/master/ollama)        | 本地运行大语言模型的服务器环境。                             |
-| [plausible](/dejavu/selfhosted/src/branch/master/plausible)  | 简单易用且隐私友好的 Google Analytics 替代方案。             |
-| [stirling-pdf](/dejavu/selfhosted/src/branch/master/stirling-pdf) | 可以在任何设备随时编辑 PDF 文件。                            |
-| [twikoo](/dejavu/selfhosted/src/branch/master/twikoo)        | 简单、安全且免费的评论系统。                                 |
-| [uptime-kuma](/dejavu/selfhosted/src/branch/master/uptime-kuma) | 精美的自托管服务监控工具。                                   |
-| [wakapi](/dejavu/selfhosted/src/branch/master/wakapi)        | 极简、自托管的 WakaTime 兼容后端，用于编码统计。             |
-| [woodpecker-ci](/dejavu/selfhosted/src/branch/master/woodpecker-ci) | 简单而强大的 CI/CD 引擎，扩展性极佳。                        |
-| [forgejo](/dejavu/selfhosted/src/branch/master/forgejo)      | 一个自托管的轻量级软件锻造平台。安装简单，维护低，能完成任务。 |
-| [memos](/dejavu/selfhosted/src/branch/master/memos)          | 隐私优先的笔记服务，零遥测。没有跟踪，没有广告，没有订阅费。 |
-| [onedev](/dejavu/selfhosted/src/branch/master/onedev)        | 带有 CI/CD、看板和软件包的 Git 服务器。无缝集成。无与伦比的体验。 |
-| [pocket-id](/dejavu/selfhosted/src/branch/master/pocket-id)  | 一个简单易用的 OIDC 提供商，允许用户用通行密钥认证服务。     |
-| [tinyauth](/dejavu/selfhosted/src/branch/master/tinyauth)    | 保护你的应用，使用一个最简单的登录界面。                     |
-| [n8n](/dejavu/selfhosted/src/branch/master/n8n/)             | 具有原生 AI 功能的公平代码工作流自动化平台。                 |
+| [Ollama](/dejavu/selfhosted/src/branch/master/ollama)        | 本地运行大语言模型的服务器环境。                             |
+| [Plausible](/dejavu/selfhosted/src/branch/master/plausible)  | 简单易用且隐私友好的 Google Analytics 替代方案。             |
+| [Stirling PDF](/dejavu/selfhosted/src/branch/master/stirling-pdf) | 可以在任何设备随时编辑 PDF 文件。                            |
+| [Twikoo](/dejavu/selfhosted/src/branch/master/twikoo)        | 简单、安全且免费的评论系统。                                 |
+| [Uptime Kuma](/dejavu/selfhosted/src/branch/master/uptime-kuma) | 精美的自托管服务监控工具。                                   |
+| [Wakapi](/dejavu/selfhosted/src/branch/master/wakapi)        | 极简、自托管的 WakaTime 兼容后端，用于编码统计。             |
+| [Woodpecker CI](/dejavu/selfhosted/src/branch/master/woodpecker-ci) | 简单而强大的 CI/CD 引擎，扩展性极佳。                        |
+| [Forgejo](/dejavu/selfhosted/src/branch/master/forgejo)      | 一个自托管的轻量级软件锻造平台。安装简单，维护低，能完成任务。 |
+| [Memos](/dejavu/selfhosted/src/branch/master/memos)          | 隐私优先的笔记服务，零遥测。没有跟踪，没有广告，没有订阅费。 |
+| [OneDev](/dejavu/selfhosted/src/branch/master/onedev)        | 带有 CI/CD、看板和软件包的 Git 服务器。无缝集成。无与伦比的体验。 |
+| [Pocket ID](/dejavu/selfhosted/src/branch/master/pocket-id)  | 一个简单易用的 OIDC 提供商，允许用户用通行密钥认证服务。     |
+| [Tinyauth](/dejavu/selfhosted/src/branch/master/tinyauth)    | 保护你的应用，使用一个最简单的登录界面。                     |
+| [n8n](/dejavu/selfhosted/src/branch/master/n8n)              | 具有原生 AI 功能的公平代码工作流自动化平台。                 |
+| [Umami](/dejavu/selfhosted/src/branch/master/umami)          | 一个现代的、注重隐私的 Google Analytics 开源替代品。         |
 
 ## 使用方式（简要）
 

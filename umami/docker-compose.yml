@@ -1,0 +1,56 @@
+services:
+  umami:
+    image: ghcr.io/umami-software/umami:latest
+    container_name: umami
+    env_file: .env
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    init: true
+    restart: unless-stopped
+    environment:
+      - DATABASE_TYPE=postgresql
+      - DATABASE_URL=postgresql://umami:umami@db:5432/umami
+      - UMAMI_POSTGRES_DB=umami
+      - UMAMI_POSTGRES_USER=umami
+      - UMAMI_POSTGRES_PASSWORD=umami
+      - REDIS_PASSWORD=redisUmami
+      - REDIS_URL=redis://:redis@redis:6379
+    healthcheck:
+      test: ["CMD-SHELL", "curl http://localhost:3000/api/heartbeat"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+  db:
+    image: postgres:15-alpine
+    container_name: umami-db
+    env_file: .env
+    environment:
+      POSTGRES_DB: umami
+      POSTGRES_USER: umami
+      POSTGRES_PASSWORD: umami
+    volumes:
+      - ./umami-db-data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U umami -d umami"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+  redis:
+    image: redis:alpine
+    container_name: umami-redis
+    env_file: .env
+    command: redis-server --requirepass redis
+    volumes:
+      - ./redis-data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "redisUmami", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
