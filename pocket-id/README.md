@@ -8,4 +8,4 @@
 
 ## Guide
 
-- [自托管部署 Pocket ID 与 Tinyauth 完全指南 - Tinyauth 安装配置](https://blog.dejavu.moe/posts/build-passkeys-identity-system-with-pocketid-x-tinyauth/#tinyauth-安装配置)
+- [自托管部署 Pocket ID 与 Tinyauth 完全指南 - Pocket ID 安装配置](https://blog.dejavu.moe/posts/build-passkeys-identity-system-with-pocketid-x-tinyauth/#pocket-id-安装配置)
