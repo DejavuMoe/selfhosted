@@ -7,7 +7,7 @@ services:
       - "127.0.0.1:30001:3000"
     environment:
       - APP_TITLE=Tinyauth SSO
-      - APP_URL=https://auth.via.moe
+      - APP_URL=https://tinyauth.your.domain
       # sudo docker run -i -t --rm ghcr.io/steveiliop56/tinyauth:v4 user create --interactive
       - USERS=
       - DISABLE_ANALYTICS=true

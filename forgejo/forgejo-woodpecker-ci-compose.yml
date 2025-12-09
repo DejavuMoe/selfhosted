@@ -27,7 +27,7 @@ services:
     environment:
       - WOODPECKER_OPEN=false
       - WOODPECKER_ADMIN=your forgejo username
-      - WOODPECKER_HOST=https://woodpecker.via.moe
+      - WOODPECKER_HOST=https://woodpecker.your.domain
       - WOODPECKER_AGENT_SECRET=
       - WOODPECKER_DISABLE_VERSION_CHECK=true
       - WOODPECKER_FORGEJO=true
