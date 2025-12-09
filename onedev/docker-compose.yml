@@ -1,0 +1,52 @@
+services:
+  db:
+    image: postgres:15.4
+    container_name: onedev-db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=onedev
+      - POSTGRES_USER=onedev
+      - POSTGRES_PASSWORD=onedev
+    volumes:
+      - ./db-data:/var/lib/postgresql/data
+    networks:
+      - onedev-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U onedev"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  onedev:
+    image: 1dev/server:latest
+    container_name: onedev
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - hibernate_dialect=io.onedev.server.persistence.PostgreSQLDialect
+      - hibernate_connection_driver_class=org.postgresql.Driver
+      - hibernate_connection_url=jdbc:postgresql://db:5432/onedev
+      - hibernate_connection_username=onedev
+      - hibernate_connection_password=onedev
+
+      # Initialize administrator information
+      # (valid for first startup only)
+      #- initial_user=DejavuMoe
+      #- initial_password=
+      #- initial_email=admin@dejavu.moe
+      #- initial_server_url=https://git.niup.top
+      #- initial_ssh_root_url=
+
+    volumes:
+      - ./onedev-data:/opt/onedev
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "127.0.0.1:6610:6610"
+    networks:
+      - onedev-network
+
+networks:
+  onedev-network:
+    driver: bridge
