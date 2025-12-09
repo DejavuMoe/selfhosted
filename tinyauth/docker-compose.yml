@@ -1,0 +1,31 @@
+services:
+  tinyauth:
+    image: ghcr.io/steveiliop56/tinyauth:v4
+    container_name: tinyauth
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:30001:3000"
+    environment:
+      - APP_TITLE=Tinyauth SSO
+      - APP_URL=https://auth.via.moe
+      # sudo docker run -i -t --rm ghcr.io/steveiliop56/tinyauth:v4 user create --interactive
+      - USERS=
+      - DISABLE_ANALYTICS=true
+      - LOG_JSON=true
+      - SECURE_COOKIE=true
+      - OAUTH_WHITELIST=
+      - SESSION_EXPIRY=7200
+      - LOGIN_TIMEOUT=300
+      - LOGIN_MAX_RETRIES=3
+      # - BACKGROUND_IMAGE=
+      - GENERIC_SKIP_SSL=false
+      # - DISABLE_RESOURCES=false
+      # - TRUSTED_PROXIES=
+    volumes:
+      - ./data:/data
+    healthcheck:
+      test: ["CMD", "tinyauth", "healthcheck"]
+      interval: 30s
+      timeout: 5s
+      start_period: 5s
+      retries: 3
