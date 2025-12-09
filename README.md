@@ -29,7 +29,7 @@ Each folder represents an independent service and usually contains:
 | [Gitea](/dejavu/selfhosted/src/branch/master/gitea)          | Lightweight self-hosted Git hosting platform.                |
 | [Hugo](/dejavu/selfhosted/src/branch/master/hugo)            | Static website build and deployment environment based on Hugo, Gitea and Woodpecker CI. |
 | [immich](/dejavu/selfhosted/src/branch/master/immich)        | High-performance self-hosted photo and video management platform. |
-| [IT Tools](/dejavu/selfhosted/src/branch/master/it-tolls)    | Collection of commonly used self-hosted IT tools.            |
+| [IT Tools](/dejavu/selfhosted/src/branch/master/it-tools)    | Collection of commonly used self-hosted IT tools.            |
 | [nah.pet](/dejavu/selfhosted/src/branch/master/nah.pet)      | Rewriting paths with bad energy - An alternative to TinyURL, YOURLS, Shlink. |
 | [Ollama](/dejavu/selfhosted/src/branch/master/ollama)        | Server environment for running large language models locally. |
 | [Plausible](/dejavu/selfhosted/src/branch/master/plausible)  | Easy to use and privacy-friendly Google Analytics alternative. |

@@ -29,7 +29,7 @@
 | [Gitea](/dejavu/selfhosted/src/branch/master/gitea)          | 轻量级自托管 Git 代码托管平台。                              |
 | [Hugo](/dejavu/selfhosted/src/branch/master/hugo)            | 基于 Hugo、Gitea 和 Woodpecker CI 的静态网站构建与部署环境。 |
 | [immich](/dejavu/selfhosted/src/branch/master/immich)        | 高性能的自托管照片与视频管理平台。                           |
-| [IT Tools](/dejavu/selfhosted/src/branch/master/it-tolls)    | 常用自托管 IT 工具集合。                                     |
+| [IT Tools](/dejavu/selfhosted/src/branch/master/it-tools)    | 常用自托管 IT 工具集合。                                     |
 | [nah.pet](/dejavu/selfhosted/src/branch/master/nah.pet)      | 重写短链接路径的另类方案——替代 TinyURL、YOURLS、Shlink。     |
 | [Ollama](/dejavu/selfhosted/src/branch/master/ollama)        | 本地运行大语言模型的服务器环境。                             |
 | [Plausible](/dejavu/selfhosted/src/branch/master/plausible)  | 简单易用且隐私友好的 Google Analytics 替代方案。             |
