@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: memos-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: memos
+      POSTGRES_USER: memos
+      POSTGRES_PASSWORD: memos
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U memos -d memos"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  memos:
+    image: neosmemo/memos:stable
+    container_name: memos
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      - MEMOS_DRIVER=postgres
+      - MEMOS_DSN=postgresql://memos:memos@postgres:5432/memos?sslmode=disable
+      - MEMOS_MODE=prod
+      - MEMOS_ADDR=0.0.0.0
+      - MEMOS_PORT=5230
+    ports:
+      - "127.0.0.1:5230:5230"
