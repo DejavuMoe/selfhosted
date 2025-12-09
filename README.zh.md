@@ -43,6 +43,7 @@
 | [onedev](/dejavu/selfhosted/src/branch/master/onedev)        | 带有 CI/CD、看板和软件包的 Git 服务器。无缝集成。无与伦比的体验。 |
 | [pocket-id](/dejavu/selfhosted/src/branch/master/pocket-id)  | 一个简单易用的 OIDC 提供商，允许用户用通行密钥认证服务。     |
 | [tinyauth](/dejavu/selfhosted/src/branch/master/tinyauth)    | 保护你的应用，使用一个最简单的登录界面。                     |
+| [n8n](/dejavu/selfhosted/src/branch/master/n8n/)             | 具有原生 AI 功能的公平代码工作流自动化平台。                 |
 
 ## 使用方式（简要）
 

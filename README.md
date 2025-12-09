@@ -43,6 +43,7 @@ Each folder represents an independent service and usually contains:
 | [onedev](/dejavu/selfhosted/src/branch/master/onedev)        | Git server with CI/CD, kanban, and packages. Seamless integration. Unparalleled experience. |
 | [pocket-id](/dejavu/selfhosted/src/branch/master/pocket-id)  | A simple and easy-to-use OIDC provider that allows users to authenticate with their passkeys to your services. |
 | [tinyauth](/dejavu/selfhosted/src/branch/master/tinyauth)    | The simplest way to protect your apps with a login screen.   |
+| [n8n](/dejavu/selfhosted/src/branch/master/n8n/)             | Fair-code workflow automation platform with native AI capabilities. |
 
 ## Usage (Quick Guide)
 
