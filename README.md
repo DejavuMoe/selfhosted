@@ -23,7 +23,7 @@ Each folder represents an independent service and usually contains:
 
 | Name                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Bark Server](/dejavu/selfhosted/src/branch/master/bark-server) | Self-hosted server implementation for iOS Bark push service. |
+| [Bark Server](src/branch/master/bark-server) | Self-hosted server implementation for iOS Bark push service. |
 | [Blinko](/dejavu/selfhosted/src/branch/master/blinko)        | An open-source, self-hosted personal AI note tool prioritizing privacy, built using TypeScript. |
 | [Cloudreve Pro](/dejavu/selfhosted/src/branch/master/cloudreve-pro) | Private cloud storage system with support for multiple storage backends. |
 | [Gitea](/dejavu/selfhosted/src/branch/master/gitea)          | Lightweight self-hosted Git hosting platform.                |
